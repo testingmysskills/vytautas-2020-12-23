@@ -1,0 +1,13 @@
+.media {
+  height: 0;
+  padding-top: 56.25%;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.progress {
+  position: absolute;
+  color: rgb(220, 0, 78);
+}

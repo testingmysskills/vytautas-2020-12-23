@@ -1,0 +1,11 @@
+{
+  "rules": {
+    "jsx-quotes": ["error", "prefer-single"],
+    "no-debugger": "warn"
+  },
+  "extends": [
+    "react-app",
+    "react-app/jest",
+    "standard"
+  ]
+}
