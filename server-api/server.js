@@ -10,6 +10,10 @@ const PORT = 3001
 const UPLOADS_PATH = path.join(__dirname, '/uploads')
 const MEGA_BYTE = 1024 * 1024
 
+if (!fs.existsSync(UPLOADS_PATH)){
+  fs.mkdirSync(UPLOADS_PATH)
+}
+
 app.use(fileUpload({
   limits: {
     fileSize: 10 * MEGA_BYTE
