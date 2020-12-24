@@ -77,7 +77,7 @@ const FileInfo = ({ name, size, highlight }: Props) => {
 
   return (
     <>
-      <Card className={styles.root}>
+      <Card className={styles.root} data-testid={`upload-${name}`}>
         <CardMedia
           image={`http://localhost:3001/uploads/${name}`}
           title={name}

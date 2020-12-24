@@ -47,12 +47,12 @@ const UploadsList = () => {
       <div className={styles.header}>
         <Grid container spacing={2}>
           <Grid md={8} xs={12} item>
-            <Typography variant='h5'>
+            <Typography variant='h5' data-testid='total-count'>
               {uploads.length} documents
             </Typography>
           </Grid>
           <Grid md={4} xs={12} item>
-            <Typography variant='h5'>
+            <Typography variant='h5' data-testid='total-size'>
               Total size: <strong>{calculateFileSize(totalSize)}</strong>
             </Typography>
           </Grid>

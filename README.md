@@ -14,6 +14,10 @@ Frontend
 3. run `yarn start` to run application
 4. open `http://localhost:3000` (should open automatically)
 
+Run tests
+- Jest `yarn test`
+- Cypress `yarn e2e` (you have to start FE app in the background `yarn start`)
+
 ## Security
 
 Addressed:
@@ -29,6 +33,8 @@ Addressed:
 - Checked `yarn audit` results - 1 `low` severity vulnerability was detected - prototype pollution
 - Server crash does not report stack trace
 - CSP policy for FE application - whitelist font-src, API and scripts source, styles
+- LATE UPDATE (after submission): Added rate limiting on the API side
+
 
 **Not** addressed:
 - Would host all assets locally
@@ -147,4 +153,4 @@ About testing:
   verifying it's functionality only via "visual" changes or checking how certain callbacks are called.
   I try to minimize the need to rely on mocks and whenever possible test using real implementation. It all mostly 
   depends on how well specs are performing without mocking
-- 
+- LATE UPDATE (after submission): Added few E2E specs with Cypress

@@ -16,6 +16,7 @@
     "@types/react-dom": "^16.9.8",
     "@types/react-highlight-words": "^0.16.1",
     "axios": "^0.21.0",
+    "cypress": "^6.2.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
@@ -35,7 +36,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "lint": "eslint . --fix",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "e2e": "cypress run"
   },
   "browserslist": {
     "production": [

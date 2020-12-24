@@ -4,6 +4,7 @@ const cors = require('cors')
 const fileUpload = require('express-fileupload')
 const path = require('path')
 const fs = require('fs')
+const rateLimit = require('express-rate-limit')
 
 const PORT = 3001
 const UPLOADS_PATH = path.join(__dirname, '/uploads')
@@ -18,6 +19,10 @@ app.use(fileUpload({
   preserveExtension: true
 }))
 app.use(cors())
+app.use(rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100 // limit each IP to 100 requests per windowMs
+}))
 app.use('/uploads', express.static(UPLOADS_PATH))
 
 app.get('/', (req, res) => {
